@@ -1,0 +1,15 @@
+<br><label>Search: <input type="text" ng-model="searchText" /></label><br>
+<table>
+<tr>
+<th>Brand:</th>
+<th>Name:</th>
+<th>Country:</th>
+<th>Review:</th>
+</tr>
+<tr ng-repeat="coffee in coffees | filter:searchText | orderBy: 'name'">
+<td>{{coffee.brand}} </td>
+<td>{{coffee.name}} </td>
+<td>{{coffee.country}}</td>
+<td><a ng-href="#/{{coffee.id}}" class="btn btn-primary" ng-model="singleModel" ng-click="getReview(coffee.id)">Review</a></td>
+</tr>
+</table>

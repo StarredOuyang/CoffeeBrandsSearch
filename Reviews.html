@@ -1,0 +1,16 @@
+<!--<label><a href="index.html">Main page</a></label><br>-->
+<table>
+<label>Reviews of {{selectedName}} from {{selectedBrand}}:<label><br>
+
+<tr>
+<th>Reviewer:</th>
+<th>Comment:</th>
+<th>Rating:</th>
+</tr>
+<tr ng-repeat="review in reviews">
+<td>{{review.reviewer}}</td>
+<td>{{review.comment}}</td>
+<td>{{review.rating}}</td>
+<!--<td><span uib-rating ng-model="review.rating" max="10" read-only="true"></span></td>-->
+</tr>
+</table>
